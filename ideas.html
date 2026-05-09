@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Ideas · Eunsoo</title>
+  <style>
+    :root{--bg:#FAF7F2;--card:#F0EBE3;--text:#1C1714;--muted:#7A6E68;--accent:#8B5E3C;--border:#DDD4C8;--bear:#7A3333;--bull:#2D5C3E;--serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,system-ui,sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;border-bottom:.5px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
+    nav .logo{font-family:var(--serif);font-size:1.05rem;color:var(--text);text-decoration:none}
+    nav ul{display:flex;gap:2rem;list-style:none}
+    nav ul a{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .15s}
+    nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .main{max-width:680px;margin:0 auto;padding:4rem 2rem}
+    .eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin-bottom:.75rem}
+    .intro{font-size:.875rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:2.5rem}
+    /* Pitch cards */
+    .pitch{border:.5px solid var(--border);border-radius:6px;margin-bottom:.875rem;overflow:hidden}
+    .pitch-header{padding:1.25rem 1.5rem;cursor:pointer;background:var(--bg);transition:background .15s}
+    .pitch-header:hover,.pitch.open .pitch-header{background:var(--card)}
+    .pitch-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.35rem}
+    .pitch-ticker{font-family:var(--serif);font-size:1.2rem;color:var(--text)}
+    .pitch-badge{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;padding:2px 7px;border:.5px solid}
+    .pitch-badge.bear{color:var(--bear);border-color:var(--bear)}
+    .pitch-badge.bull{color:var(--bull);border-color:var(--bull)}
+    .pitch-date{font-size:.65rem;color:var(--muted)}
+    .pitch-co{font-size:.78rem;color:var(--muted);margin-bottom:.4rem}
+    .pitch-thesis{font-size:.9rem;line-height:1.65;color:var(--text);margin-bottom:.75rem}
+    /* Social + toggle footer */
+    .pitch-footer{display:flex;justify-content:space-between;align-items:center}
+    .social-links{display:flex;gap:.5rem}
+    .s-btn{font-size:.62rem;letter-spacing:.06em;color:var(--muted);border:.5px solid var(--border);border-radius:3px;padding:3px 9px;text-decoration:none;background:none;transition:color .15s,border-color .15s}
+    .s-btn:hover{color:var(--accent);border-color:var(--accent)}
+    .pitch-toggle{font-size:.7rem;color:var(--muted)}
+    /* Expanded body */
+    .pitch-body{display:none;border-top:.5px solid var(--border)}
+    .pitch.open .pitch-body{display:block}
+    .pt-row{display:flex;background:var(--card);border-bottom:.5px solid var(--border)}
+    .pt-cell{flex:1;padding:.75rem 1.25rem;border-right:.5px solid var(--border)}
+    .pt-cell:last-child{border-right:none}
+    .pt-label{display:block;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+    .pt-val{font-family:var(--serif);font-size:.95rem;color:var(--text)}
+    .pt-bear{color:var(--bear)}.pt-bull{color:var(--bull)}.pt-as-of{font-size:.8rem;color:var(--muted)}
+    .psec{padding:.9rem 1.5rem;background:var(--card);border-bottom:.5px solid var(--border)}
+    .psec:last-child{border-bottom:none}
+    .psec-label{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+    .pbullet{display:flex;gap:.875rem;margin-bottom:.75rem}
+    .pbullet:last-child{margin-bottom:0}
+    .pdash{color:var(--accent);flex-shrink:0}
+    .pbullet p{font-size:.875rem;line-height:1.75;color:var(--text);margin:0}
+    .pvariant{font-size:.875rem;line-height:1.75;color:var(--text)}
+    @media(max-width:600px){nav{padding:1rem 1.25rem}.main{padding:3rem 1.25rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Eunsoo</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">My Story</a></li>
+      <li><a href="ideas.html" class="active">Investment Ideas</a></li>
+      <li><a href="experience.html">Professional Experience</a></li>
+      <li><a href="thoughts.html">Thoughts &amp; Adventures</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <p class="eyebrow">Research</p>
+    <h2>Investment Ideas</h2>
+    <p class="intro">Personal research developed independently. Not investment advice.</p>
+
+    <!-- ============================================================
+         ADD NEW PITCH: copy one .pitch block below and paste here.
+         Update the onclick id, badge class (bear/bull), SA/X links,
+         and all content. The PT row, sections all clone cleanly.
+         ============================================================ -->
+
+    <div class="pitch" id="pitch-TGT">
+      <div class="pitch-header" onclick="toggle('pitch-TGT')">
+        <div class="pitch-meta">
+          <span class="pitch-ticker">TGT</span>
+          <span class="pitch-badge bear">bear</span>
+          <span class="pitch-date">Apr 2025</span>
+        </div>
+        <p class="pitch-co">Target Corporation</p>
+        <p class="pitch-thesis">Structural share loss to Walmart and Amazon with no credible strategic response.</p>
+        <div class="pitch-footer">
+          <div class="social-links">
+            <!-- UPDATE: replace # with your actual SeekingAlpha and X post URLs -->
+            <a class="s-btn" href="#" target="_blank">SeekingAlpha ↗</a>
+            <a class="s-btn" href="#" target="_blank">𝕏 ↗</a>
+          </div>
+          <span class="pitch-toggle" id="toggle-TGT">▼ expand</span>
+        </div>
+      </div>
+      <div class="pitch-body">
+        <div class="pt-row">
+          <div class="pt-cell"><span class="pt-label">Bear</span><span class="pt-val pt-bear">$90.50</span></div>
+          <div class="pt-cell"><span class="pt-label">Base</span><span class="pt-val">$108</span></div>
+          <div class="pt-cell"><span class="pt-label">Bull</span><span class="pt-val pt-bull">$128</span></div>
+          <div class="pt-cell"><span class="pt-label">As of</span><span class="pt-val pt-as-of">Apr 2025</span></div>
+        </div>
+        <div class="psec">
+          <p class="psec-label">Variant View</p>
+          <p class="pvariant">The market prices TGT as a solid retailer in a rough patch. Our view: the share loss is permanent, not cyclical — Walmart owns grocery, Amazon owns discretionary. No recovery path exists that doesn't require a complete strategic reinvention management hasn't signaled.</p>
+        </div>
+        <div class="psec">
+          <p class="psec-label">Thesis Points</p>
+          <div class="pbullet"><span class="pdash">—</span><p>Walmart has won the grocery war, consolidating basket trips and everyday consumables share.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>Amazon continues eroding discretionary edge — apparel and home goods increasingly bought online.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>The "cheap chic" identity has faded with no clear repositioning strategy.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>SG&A deleverage on declining comps; inventory write-down pressure with no reversal catalyst.</p></div>
+        </div>
+        <div class="psec">
+          <p class="psec-label">Risks</p>
+          <div class="pbullet"><span class="pdash">—</span><p>Consumer trade-down environment could temporarily boost traffic.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>Successful private label expansion could improve margin structure.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>Activist involvement could force a strategic review.</p></div>
+        </div>
+        <div class="psec">
+          <p class="psec-label">Signposts</p>
+          <div class="pbullet"><span class="pdash">—</span><p>Same-store sales comps vs. Walmart and sector peers each quarter.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>Gross margin trajectory and inventory health disclosures.</p></div>
+          <div class="pbullet"><span class="pdash">—</span><p>Any strategic pivot or M&A announcements from management.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    function toggle(id) {
+      const card = document.getElementById(id);
+      const ticker = id.replace('pitch-', '');
+      const btn = document.getElementById('toggle-' + ticker);
+      const isOpen = card.classList.toggle('open');
+      btn.textContent = isOpen ? '▲ collapse' : '▼ expand';
+    }
+  </script>
+</body>
+</html>

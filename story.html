@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Story · Eunsoo</title>
+  <style>
+    :root{--bg:#FAF7F2;--card:#F0EBE3;--text:#1C1714;--muted:#7A6E68;--accent:#8B5E3C;--border:#DDD4C8;--serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,system-ui,sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;border-bottom:.5px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
+    nav .logo{font-family:var(--serif);font-size:1.05rem;color:var(--text);text-decoration:none}
+    nav ul{display:flex;gap:2rem;list-style:none}
+    nav ul a{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .15s}
+    nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .main{max-width:620px;margin:0 auto;padding:4rem 2rem}
+    .eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin-bottom:3rem}
+    .timeline{position:relative;padding-left:2.25rem}
+    .timeline::before{content:'';position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--border)}
+    /*
+     * TIMELINE ITEM
+     * To add a new event: copy one .titem block and paste it at the TOP (newest first).
+     * To add a photo: uncomment the <img> tag inside the item and set src="your-photo.jpg"
+     */
+    .titem{position:relative;margin-bottom:2.75rem}
+    .tdot{position:absolute;left:-2rem;top:5px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:1.5px solid var(--border)}
+    .titem:first-child .tdot{background:var(--accent);border-color:var(--accent)}
+    .tyr{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+    .ttitle{font-family:var(--serif);font-size:1.05rem;margin-bottom:.45rem}
+    .tbody{font-size:.875rem;line-height:1.75;color:var(--muted)}
+    /* Timeline photo — shown when an <img class="t-img"> is present */
+    .t-img{display:block;margin-top:.85rem;width:100%;max-height:220px;object-fit:cover;border-radius:4px}
+    @media(max-width:600px){nav{padding:1rem 1.25rem}.main{padding:3rem 1.25rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Eunsoo</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html" class="active">My Story</a></li>
+      <li><a href="ideas.html">Investment Ideas</a></li>
+      <li><a href="experience.html">Professional Experience</a></li>
+      <li><a href="thoughts.html">Thoughts &amp; Adventures</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <p class="eyebrow">Background</p>
+    <h2>My Story</h2>
+    <div class="timeline">
+
+      <!-- ============================================================
+           ADD NEW EVENTS HERE — paste a new .titem block at the top
+           PHOTO: uncomment the <img> line and set src="your-photo.jpg"
+           ============================================================ -->
+
+      <div class="titem">
+        <div class="tdot"></div>
+        <p class="tyr">Now</p>
+        <p class="ttitle">Figuring out what's next</p>
+        <p class="tbody">Exploring equity research and AI-native finance roles. Interested in internet and SMID cap coverage. Orienting toward the work that feels most like thinking.</p>
+        <!-- <img src="your-photo.jpg" class="t-img" alt=""> -->
+      </div>
+
+      <div class="titem">
+        <div class="tdot"></div>
+        <p class="tyr">2024–Present</p>
+        <p class="ttitle">Finding the investing thread</p>
+        <p class="tbody">Built stock pitches from scratch. Enrolled in Titans of Investing. The pull toward public markets became hard to ignore.</p>
+        <!-- <img src="your-photo.jpg" class="t-img" alt=""> -->
+      </div>
+
+      <div class="titem">
+        <div class="tdot"></div>
+        <p class="tyr">2024–Present</p>
+        <p class="ttitle">AI Transformation at Citizens</p>
+        <p class="tbody">Embedded on a major AI and data platform initiative at a top-10 U.S. bank — SDLC, agentic AI, enterprise data, and change management.</p>
+        <!-- <img src="your-photo.jpg" class="t-img" alt=""> -->
+      </div>
+
+      <div class="titem">
+        <div class="tdot"></div>
+        <p class="tyr">2023</p>
+        <p class="ttitle">Joined Bain &amp; Company</p>
+        <p class="tbody">Started as an Associate Consultant in New York. Quickly gravitated toward technology and financial services work.</p>
+        <!-- <img src="your-photo.jpg" class="t-img" alt=""> -->
+      </div>
+
+      <div class="titem">
+        <div class="tdot"></div>
+        <p class="tyr">2019–2023</p>
+        <p class="ttitle">Computer Science, [University]</p>
+        <p class="tbody">Built a foundation in algorithms, systems, and software engineering. First real exposure to rigorous thinking at scale.</p>
+        <!-- <img src="your-photo.jpg" class="t-img" alt=""> -->
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eunsoo</title>
+  <style>
+    :root { --bg:#FAF7F2;--card:#F0EBE3;--text:#1C1714;--muted:#7A6E68;--accent:#8B5E3C;--border:#DDD4C8;--serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,system-ui,sans-serif; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;border-bottom:0.5px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
+    nav .logo{font-family:var(--serif);font-size:1.05rem;color:var(--text);text-decoration:none}
+    nav ul{display:flex;gap:2rem;list-style:none}
+    nav ul a{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .15s}
+    nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .main{max-width:700px;margin:0 auto;padding:5rem 2rem 4rem}
+    .eyebrow{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+    .hero{display:flex;justify-content:space-between;align-items:flex-start;gap:2.5rem}
+    .hero-text{flex:1}
+    h1{font-family:var(--serif);font-size:clamp(2.5rem,6vw,3.75rem);font-weight:400;line-height:1.08;letter-spacing:-0.01em;margin-bottom:1.75rem}
+    .tagline{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:.75rem}
+    .bio{font-size:.92rem;line-height:1.8;color:var(--muted)}
+    /*
+     * PHOTO — HOME PAGE
+     * Replace the .photo-placeholder div with:
+     *   <img src="your-photo.jpg" class="hero-photo" alt="Eunsoo">
+     * Recommended: square crop, min 300×300px
+     */
+    .photo-placeholder{width:140px;height:140px;border-radius:50%;background:var(--card);border:1.5px dashed var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.5rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .hero-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;flex-shrink:0;margin-top:.5rem}
+    @media(max-width:600px){nav{padding:1rem 1.25rem}.main{padding:3rem 1.25rem}.hero{flex-direction:column-reverse;gap:1.5rem}.photo-placeholder,.hero-photo{width:90px;height:90px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Eunsoo</a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="story.html">My Story</a></li>
+      <li><a href="ideas.html">Investment Ideas</a></li>
+      <li><a href="experience.html">Professional Experience</a></li>
+      <li><a href="thoughts.html">Thoughts &amp; Adventures</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <p class="eyebrow">Associate Consultant · Bain &amp; Company · New York</p>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Eunsoo</h1>
+        <p class="tagline">I think at the intersection of technology, capital, and strategy.</p>
+        <p class="bio">By day, AI transformation at Bain. On the side, building conviction on public equities — looking for the variant view the market hasn't priced in yet.</p>
+      </div>
+      <!-- PHOTO: replace this div with <img src="your-photo.jpg" class="hero-photo" alt="Eunsoo"> -->
+      <div class="photo-placeholder">photo</div>
+    </div>
+  </main>
+</body>
+</html>

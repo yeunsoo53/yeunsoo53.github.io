@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thoughts &amp; Adventures · Eunsoo</title>
+  <style>
+    :root{--bg:#FAF7F2;--card:#F0EBE3;--text:#1C1714;--muted:#7A6E68;--accent:#8B5E3C;--border:#DDD4C8;--serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,system-ui,sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;border-bottom:.5px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
+    nav .logo{font-family:var(--serif);font-size:1.05rem;color:var(--text);text-decoration:none}
+    nav ul{display:flex;gap:2rem;list-style:none}
+    nav ul a{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .15s}
+    nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .main{max-width:680px;margin:0 auto;padding:4rem 2rem}
+    .eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin-bottom:2.5rem}
+    /* Post cards */
+    .post{border:.5px solid var(--border);border-radius:6px;margin-bottom:.875rem;overflow:hidden}
+    .post-header{padding:1.25rem 1.5rem;cursor:pointer;background:var(--bg);transition:background .15s}
+    .post-header:hover,.post.open .post-header{background:var(--card)}
+    .post-date{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+    .post-title{font-family:var(--serif);font-size:1.05rem;color:var(--text);margin-bottom:.45rem}
+    .post-excerpt{font-size:.875rem;line-height:1.65;color:var(--muted);margin-bottom:.75rem}
+    /* Social + toggle footer */
+    .post-footer{display:flex;justify-content:space-between;align-items:center}
+    .social-links{display:flex;gap:.5rem}
+    .s-btn{font-size:.62rem;letter-spacing:.06em;color:var(--muted);border:.5px solid var(--border);border-radius:3px;padding:3px 9px;text-decoration:none;background:none;transition:color .15s,border-color .15s}
+    .s-btn:hover{color:var(--accent);border-color:var(--accent)}
+    .post-toggle{font-size:.7rem;color:var(--muted)}
+    /* Expanded body */
+    .post-body{display:none;padding:1.25rem 1.5rem;border-top:.5px solid var(--border);background:var(--card)}
+    .post.open .post-body{display:block}
+    .post-content{font-size:.9rem;line-height:1.85;color:var(--text)}
+    .post-content p+p{margin-top:1rem}
+    @media(max-width:600px){nav{padding:1rem 1.25rem}.main{padding:3rem 1.25rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Eunsoo</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">My Story</a></li>
+      <li><a href="ideas.html">Investment Ideas</a></li>
+      <li><a href="experience.html">Professional Experience</a></li>
+      <li><a href="thoughts.html" class="active">Thoughts &amp; Adventures</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <p class="eyebrow">Writing</p>
+    <h2>Thoughts &amp; Adventures</h2>
+
+    <!-- ============================================================
+         ADD NEW POST: copy one .post block and paste at the TOP.
+         Update id="post-1" to post-2, post-3, etc.
+         Update Substack and YouTube href to your actual post URLs.
+         ============================================================ -->
+
+    <div class="post" id="post-1">
+      <div class="post-header" onclick="togglePost('post-1')">
+        <p class="post-date">Apr 2025</p>
+        <p class="post-title">What equity research actually teaches you about thinking</p>
+        <p class="post-excerpt">Building a stock pitch from scratch is one of the better thinking exercises I've found.</p>
+        <div class="post-footer">
+          <div class="social-links">
+            <!-- UPDATE: replace # with your actual Substack and YouTube URLs -->
+            <a class="s-btn" href="#" target="_blank">Substack ↗</a>
+            <a class="s-btn" href="#" target="_blank">YouTube ↗</a>
+          </div>
+          <span class="post-toggle" id="toggle-post-1">▼ read more</span>
+        </div>
+      </div>
+      <div class="post-body">
+        <div class="post-content">
+          <p>When you build a stock pitch, you're forced to have a view — not just a summary of what everyone else thinks. The variant view exercise is humbling. Most of the time, your initial "insight" is just consensus with more footnotes.</p>
+          <p>The discipline is in asking: what would have to be true for this to be wrong? And then stress-testing your own conviction against that. The best pitches don't win on information edge. They win on interpretive edge — the same data, read differently. That's what I'm trying to build.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="post" id="post-2">
+      <div class="post-header" onclick="togglePost('post-2')">
+        <p class="post-date">Feb 2025</p>
+        <p class="post-title">Six months into AI transformation work: what I've learned</p>
+        <p class="post-excerpt">Working on an enterprise AI platform engagement has changed how I think about what makes AI initiatives succeed or fail.</p>
+        <div class="post-footer">
+          <div class="social-links">
+            <a class="s-btn" href="#" target="_blank">Substack ↗</a>
+            <a class="s-btn" href="#" target="_blank">YouTube ↗</a>
+          </div>
+          <span class="post-toggle" id="toggle-post-2">▼ read more</span>
+        </div>
+      </div>
+      <div class="post-body">
+        <div class="post-content">
+          <p>The biggest lesson: the technology is rarely the bottleneck. Most enterprise AI failures are change management failures dressed up as technical ones. The model works. The integration works. But the workflow didn't change, the incentives didn't change, and the people using it never had a reason to trust it.</p>
+          <p>The projects that work are the ones where someone senior cares enough to make the adjacent process changes — not just the tool deployment.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    function togglePost(id) {
+      const post = document.getElementById(id);
+      const btn = document.getElementById('toggle-' + id);
+      const isOpen = post.classList.toggle('open');
+      btn.textContent = isOpen ? '▲ close' : '▼ read more';
+    }
+  </script>
+</body>
+</html>
