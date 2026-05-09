@@ -15,7 +15,11 @@
     nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
     .main{max-width:680px;margin:0 auto;padding:4rem 2rem}
     .eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
-    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin-bottom:.75rem}
+    .page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400}
+    .li-btn{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:.5px solid var(--accent);border-radius:3px;padding:5px 12px;text-decoration:none;transition:background .15s}
+    .li-btn:hover{background:var(--card)}
+    .header-btns{display:flex;gap:.5rem}
     .intro{font-size:.875rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:2.5rem}
     /* Pitch cards */
     .pitch{border:.5px solid var(--border);border-radius:6px;margin-bottom:.875rem;overflow:hidden}
@@ -68,7 +72,14 @@
   </nav>
   <main class="main">
     <p class="eyebrow">Research</p>
-    <h2>Investment Ideas</h2>
+    <div class="page-header">
+      <h2>Investment Ideas</h2>
+      <div class="header-btns">
+        <!-- UPDATE: replace # with your actual SeekingAlpha and X profile URLs -->
+        <a class="li-btn" href="#" target="_blank">SeekingAlpha ↗</a>
+        <a class="li-btn" href="#" target="_blank">𝕏 ↗</a>
+      </div>
+    </div>
     <p class="intro">Personal research developed independently. Not investment advice.</p>
 
     <!-- ============================================================
@@ -87,11 +98,6 @@
         <p class="pitch-co">Target Corporation</p>
         <p class="pitch-thesis">Structural share loss to Walmart and Amazon with no credible strategic response.</p>
         <div class="pitch-footer">
-          <div class="social-links">
-            <!-- UPDATE: replace # with your actual SeekingAlpha and X post URLs -->
-            <a class="s-btn" href="#" target="_blank">SeekingAlpha ↗</a>
-            <a class="s-btn" href="#" target="_blank">𝕏 ↗</a>
-          </div>
           <span class="pitch-toggle" id="toggle-TGT">▼ expand</span>
         </div>
       </div>

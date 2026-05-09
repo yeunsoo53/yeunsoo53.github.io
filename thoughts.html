@@ -15,7 +15,11 @@
     nav ul a:hover,nav ul a.active{color:var(--accent);border-bottom-color:var(--accent)}
     .main{max-width:680px;margin:0 auto;padding:4rem 2rem}
     .eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
-    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin-bottom:2.5rem}
+    .page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}
+    h2{font-family:var(--serif);font-size:2.25rem;font-weight:400}
+    .li-btn{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:.5px solid var(--accent);border-radius:3px;padding:5px 12px;text-decoration:none;transition:background .15s}
+    .li-btn:hover{background:var(--card)}
+    .header-btns{display:flex;gap:.5rem}
     /* Post cards */
     .post{border:.5px solid var(--border);border-radius:6px;margin-bottom:.875rem;overflow:hidden}
     .post-header{padding:1.25rem 1.5rem;cursor:pointer;background:var(--bg);transition:background .15s}
@@ -50,7 +54,14 @@
   </nav>
   <main class="main">
     <p class="eyebrow">Writing</p>
-    <h2>Thoughts &amp; Adventures</h2>
+    <div class="page-header">
+      <h2>Thoughts &amp; Adventures</h2>
+      <div class="header-btns">
+        <!-- UPDATE: replace # with your actual Substack and YouTube profile URLs -->
+        <a class="li-btn" href="#" target="_blank">Substack ↗</a>
+        <a class="li-btn" href="#" target="_blank">YouTube ↗</a>
+      </div>
+    </div>
 
     <!-- ============================================================
          ADD NEW POST: copy one .post block and paste at the TOP.
@@ -64,11 +75,6 @@
         <p class="post-title">What equity research actually teaches you about thinking</p>
         <p class="post-excerpt">Building a stock pitch from scratch is one of the better thinking exercises I've found.</p>
         <div class="post-footer">
-          <div class="social-links">
-            <!-- UPDATE: replace # with your actual Substack and YouTube URLs -->
-            <a class="s-btn" href="#" target="_blank">Substack ↗</a>
-            <a class="s-btn" href="#" target="_blank">YouTube ↗</a>
-          </div>
           <span class="post-toggle" id="toggle-post-1">▼ read more</span>
         </div>
       </div>
@@ -86,10 +92,6 @@
         <p class="post-title">Six months into AI transformation work: what I've learned</p>
         <p class="post-excerpt">Working on an enterprise AI platform engagement has changed how I think about what makes AI initiatives succeed or fail.</p>
         <div class="post-footer">
-          <div class="social-links">
-            <a class="s-btn" href="#" target="_blank">Substack ↗</a>
-            <a class="s-btn" href="#" target="_blank">YouTube ↗</a>
-          </div>
           <span class="post-toggle" id="toggle-post-2">▼ read more</span>
         </div>
       </div>
